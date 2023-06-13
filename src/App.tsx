@@ -2,6 +2,8 @@ import { motion, useMotionValue } from 'framer-motion';
 import AppIcon from './components/AppIcon';
 
 export default function App() {
+  //? Infinity는 변환을 깨끗하게 유지시키기 위한 Null값으로 사용된다.
+  //? 지정한 범위를 벗어나기 때문에 값을 리셋시킬 수 있다.
   const mouseX = useMotionValue(Infinity);
 
   return (
