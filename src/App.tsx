@@ -27,13 +27,13 @@ export default function App() {
   return (
     <div className="relative h-screen bg-gradient-to-br from-slate-800 to-slate-600">
       <motion.div
+        className="fixed bottom-14 left-1/2 mx-auto flex h-16 max-w-xl -translate-x-1/2 items-end gap-4 rounded-2xl bg-white/10 px-4 pb-3"
         onMouseMove={(e) => {
           mouseX.set(e.pageX);
         }}
         onMouseLeave={() => {
           mouseX.set(Infinity);
         }}
-        className="fixed bottom-14 left-1/2 mx-auto flex h-16 max-w-xl -translate-x-1/2 items-end gap-4 rounded-2xl bg-white/10 px-4 pb-3"
       >
         {icons.map((icon, idx) => (
           <AppIcon key={idx} mouseX={mouseX} icon={icon} />

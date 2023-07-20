@@ -26,11 +26,16 @@ export default function AppIcon({
     damping: 12,
   });
 
+  const handleClick = () => {
+    alert(Icon.name.slice(2));
+  };
+
   return (
     <motion.div
       ref={ref}
       style={{ width }}
-      className="aspect-square w-10 overflow-hidden rounded-full bg-gray-400 p-1"
+      onClick={handleClick}
+      className="aspect-square w-10 cursor-pointer overflow-hidden rounded-full bg-gray-400 p-1"
     >
       <Icon className="h-full w-full text-gray-700" />
     </motion.div>
